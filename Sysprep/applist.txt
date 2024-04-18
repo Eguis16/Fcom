@@ -1,0 +1,128 @@
+# Todas las aplicaciones en la lista que no tengan un numeral (#) al principio de la
+# línea será desinstalada del usuario actual y eliminada del provisionamiento de Windows.
+# Para omitir una app, agrege un numeral (#) al inicio de la línea.
+#
+# Puede agregar nuevas aplicaciones colocando el nombre del paquete (PsChildName) y 
+# omitiendo los códigos especiales. Ej:
+# Microsoft.XboxSpeechToTextOverlay_1.21.13002.0_neutral_~_8wekyb3d8bbwe > Microsoft.XboxSpeechToTextOverlay
+
+## BLOATWARE DE MICROSOFT ##
+
+*Clipchamp.Clipchamp*				# Editor de vídeo Clipchamp
+*Microsoft.3DBuilder*
+*Microsoft.549981C3F5F10*			# Cortana app
+*Microsoft.BingFinance*
+*Microsoft.BingFoodAndDrink*
+*Microsoft.BingHealthAndFitness*
+*Microsoft.BingNews*
+*Microsoft.BingSports*
+*Microsoft.BingTranslator*
+*Microsoft.BingTravel*
+*Microsoft.BingWeather*
+*Microsoft.GamingApp*				# Nueva Xbox Gaming App
+*Microsoft.Getstarted*				# No se puede eliminar en Windows 11
+*Microsoft.Messaging*
+*Microsoft.Microsoft3DViewer*
+*Microsoft.MicrosoftOfficeHub*
+*Microsoft.MicrosoftPowerBIForWindows*
+*Microsoft.MicrosoftSolitaireCollection*
+*Microsoft.MixedReality.Portal*
+*Microsoft.NetworkSpeedTest*
+*Microsoft.News*
+*Microsoft.Office.OneNote*
+*Microsoft.Office.Sway*
+*Microsoft.OneConnect*
+*Microsoft.Print3D*
+*Microsoft.SkypeApp*
+*Microsoft.Todos*
+*Microsoft.WindowsAlarms*
+*Microsoft.WindowsFeedbackHub*
+*Microsoft.WindowsMaps*
+*Microsoft.XboxApp*				# Xbox companion app. Fuera de soporte por MS
+*Microsoft.Xbox.TCUI*				# Xbox UI framework
+*Microsoft.XboxGameOverlay*			# Game overlay
+*Microsoft.XboxGamingOverlay*			# Game overlay
+*Microsoft.XboxIdentityProvider*		# Xbox sign-in framework
+*Microsoft.XboxSpeechToTextOverlay*		# Overlay de closed captions de Xbox. NO SE PUEDE REINSTALAR.
+*Microsoft.YourPhone*				# Mi teléfono
+*MicrosoftCorporationII.MicrosoftFamily*
+*MicrosoftTeams* 				# Versión personal de Teams
+*Windows.DevHome*
+
+# Apps de Microsoft que generalmente se pueden dejar instaladas.
+# Eliminar el numeral (#) para deinstalarlas.
+
+#*Microsoft.GetHelp*			# Requerido por algunos solucionadores de Windows 11
+#*Microsoft.MicrosoftEdge.Stable*	# Navegador Edge
+#*Microsoft.MSPaint*			# Paint 3D
+*Microsoft.OutlookForWindows*		# Nueva app Mail: Outlook for Windows
+#*Microsoft.Paint*			# Paint
+*Microsoft.People*			# Personas. Requerido por Mail & Calendar
+*Microsoft.PowerAutomateDesktop*	# Power Automate
+#*Microsoft.RemoteDesktop*		# Escritorio remoto (APP, no el .exe)
+#*Microsoft.ScreenSketch*		# Herramienta Recortes
+*Microsoft.windowscommunicationsapps*	# Mail & Calendar
+#*Microsoft.WindowsSoundRecorder*	# Grabadora de sonidos
+#*Microsoft.MicrosoftStickyNotes*	# Sticky Notes
+#*Microsoft.Whiteboard*			# Pizarra. Preinstalado en equipos con touchscreen.
+#*Microsoft.Windows.Photos*		# Fotos
+#*Microsoft.WindowsCalculator*		# Calculadora
+#*Microsoft.WindowsCamera*		# Cámara
+#*Microsoft.WindowsStore*		# Microsoft Store. NO SE PUEDE REINSTALAR.
+#*Microsoft.WindowsTerminal*		# Windows Terminal
+#*Microsoft.ZuneMusic*			# Reproductor de música
+#*Microsoft.ZuneVideo*			# Películas y TV
+
+## BLOATWARE DE TERCEROS ##
+
+*ACGMediaPlayer*
+*ActiproSoftwareLLC*
+*AdobeSystemsIncorporated.AdobePhotoshopExpress*
+*Amazon.com.Amazon*
+*AmazonVideo.PrimeVideo*
+*Asphalt8Airborne* 
+*AutodeskSketchBook*
+*CaesarsSlotsFreeCasino*
+*COOKINGFEVER*
+*CyberLinkMediaSuiteEssentials*
+*DisneyMagicKingdoms*
+*Disney*
+*Dolby*
+*DrawboardPDF*
+*Duolingo-LearnLanguagesforFree*
+*EclipseManager*
+*Facebook*
+*FarmVille2CountryEscape*
+*fitbit*
+*Flipboard*
+*Grammarly*
+*HiddenCity*
+*HULULLC.HULUPLUS*
+*iHeartRadio*
+*Instagram*
+*king.com.BubbleWitch3Saga*
+*king.com.CandyCrushSaga*
+*king.com.CandyCrushSodaSaga*
+*LinkedInforWindows*
+*MarchofEmpires*
+*Netflix*
+*NYTCrossword*
+*OneCalendar*
+*PandoraMediaInc*
+*PhototasticCollage*
+*PicsArt-PhotoStudio*
+*Plex*
+*PolarrPhotoEditorAcademicEdition*
+*Royal Revolt*
+*Shazam*
+*Sidia.LiveWallpaper*
+*SlingTV*
+*Speed Test*
+*Spotify*
+*TikTok*
+*TuneInRadio*
+*Twitter*
+*Viber*
+*WinZipUniversal*
+*Wunderlist*
+*XING*
