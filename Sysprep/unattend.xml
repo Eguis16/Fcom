@@ -1,23 +1,63 @@
+<!-- unattend.xml preparado por Jorge Santos - Jefe Soporte TI FCOM SPA -->
+<!-- unattend.xml modificado por Eguis Suarez - Especialista TI FCOM SPA -->
+<!-- Consideraciones:
+        - Se establece la configuracion regional a Español Chile
+        - Se desactivan todas las opciones de privacidad (Telemetria, Reconocimiento de Voz, Id Publicidad, etc.)
+        - Los servicios de localizacion permiten su activacion, pero debe hacerse manualmente (no es algo que se pueda predeterminar con Sysprep)
+-->
+
 <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend">
+
     <settings pass="generalize">
         <component name="Microsoft-Windows-PnpSysprep" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <PersistAllDeviceInstalls>true</PersistAllDeviceInstalls>
         </component>
-    </settings>
-    <settings pass="windowsPE">
-        <component name="Microsoft-Windows-Setup" processorArchitecture="wow64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            <UserData>
-                <AcceptEula>true</AcceptEula>
-            </UserData>
+        </settings>
+
+    <settings pass="specialize">
+        <component name="Microsoft-Windows-Deployment" processorArchitecture="amd64" language="neutral" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <RunSynchronous>
+            <RunSynchronousCommand wcm:action="add">
+                <Order>1</Order>
+                <Path>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f</Path>
+            </RunSynchronousCommand>
+            <RunSynchronousCommand wcm:action="add">
+                <Order>2</Order>
+                <Path>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location /v Value /t REG_SZ /d Allow /f</Path>
+            </RunSynchronousCommand>
+            </RunSynchronous>
+        </component>
+        <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <InputLocale>0000340a</InputLocale>
+            <SystemLocale>es-CL</SystemLocale>
+            <UILanguage>es-MX</UILanguage>
+            <UILanguageFallback>es-ES</UILanguageFallback>
+            <UserLocale>es-CL</UserLocale>
         </component>
     </settings>
+
     <settings pass="oobeSystem">
-        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="wow64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <AutoLogon>
+            <Enabled>true</Enabled>
+            <Username></Username>
+            </AutoLogon>
             <OOBE>
-                <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
-                <ProtectYourPC>3</ProtectYourPC>
+            <HideEULAPage>true</HideEULAPage>
+            <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+            <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+            <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+            <SkipMachineOOBE>true</SkipMachineOOBE>
+            <HideLocalAccountScreen>true</HideLocalAccountScreen>
+            <ProtectYourPC>1</ProtectYourPC>
             </OOBE>
+            <TimeZone>Pacific SA Standard Time</TimeZone>
         </component>
     </settings>
+
 </unattend>
+
+
+
+
